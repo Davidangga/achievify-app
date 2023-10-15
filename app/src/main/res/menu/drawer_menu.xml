@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_todo"
+            android:icon="@drawable/list_todo"
+            android:title="Todo List"
+            android:background="@drawable/menu_item_drawable"
+            />
+        <item android:id="@+id/nav_achievement"
+            android:icon="@drawable/achievement"
+            android:title="Achievements"
+            />
+        <item android:id="@+id/nav_explore"
+            android:icon="@drawable/explore"
+            android:title="Explore"
+            />
+    </group>
+    <item android:id="@+id/nav_logout"
+        android:icon="@drawable/log_out"
+        android:title="Logout"
+        />
+</menu>

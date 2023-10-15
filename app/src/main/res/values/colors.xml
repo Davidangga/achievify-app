@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#FD0000</color>
+    <color name="fba_color">#FA6464</color>
+    <color name="activated_color">#FA6464</color>
+    <color name="pressed_color">#FFADAD</color>
+    <color name="background_color">#F8F8F8</color>
 </resources>
