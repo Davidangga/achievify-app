@@ -1,14 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.view.AuthenticationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start_todoview4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end_todoview4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <ImageView
+            android:id="@+id/app_illustration"
+            android:layout_width="0dp"
+            android:layout_height="256dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end_todoview4"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start_todoview4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.261"
+            app:srcCompat="@drawable/login_image" />
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="182dp"
+            android:layout_height="99dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end_todoview4"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start_todoview4"
+            app:layout_constraintTop_toBottomOf="@+id/app_illustration"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/app_logo" />
+
+        <Button
+            android:id="@+id/login_nav"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="Log in"
+            android:background="@drawable/button_outline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end_todoview4"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start_todoview4"
+            app:layout_constraintTop_toBottomOf="@+id/app_logo"
+            app:layout_constraintVertical_bias="0.193"/>
+
+        <Button
+            android:id="@+id/signup_nav"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="Sign Up"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end_todoview4"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start_todoview4"
+            app:layout_constraintTop_toBottomOf="@+id/login_nav"
+            app:layout_constraintVertical_bias="0.115" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

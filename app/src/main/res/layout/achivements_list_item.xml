@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="40dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/achivement_background"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            app:cardCornerRadius="30dp">
+
+            <ImageView
+                android:id="@+id/achievement_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@mipmap/testing_foreground" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/achievement_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fba_color"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:textSize="15sp"
+            android:text="Achievement Title"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/achievement_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#A8A6A6"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:textSize="12sp"
+            android:text="By User"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/achievement_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Lorem ipsum dolor sit amet consectetur. At purus blandit sit sagittis a mattis. Nibh adipiscing ligula sapien sodales ac. Eu consequat imperdiet eget massa enim mauris adipiscing lectus odio. Duis pharetra venenatis dignissim blandit enim semper eu. Sodales."
+
+            />
+
+    </LinearLayout>
+</LinearLayout>

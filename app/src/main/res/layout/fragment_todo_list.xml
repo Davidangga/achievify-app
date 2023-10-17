@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:text="TASK LIST"
             android:textColor="#525252"
-            android:textSize="12sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/guideline_end_todoview"

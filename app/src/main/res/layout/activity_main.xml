@@ -39,9 +39,9 @@
         app:menu="@menu/drawer_menu"
         app:headerLayout="@layout/nav_header"
         android:background="#FFFF"
-        app:itemBackground="@drawable/menu_item_drawable"
         app:itemIconTint="@color/drawer_item"
-        app:itemTextColor="@color/drawer_item"/>
+        app:itemTextColor="@color/drawer_item"
+        app:itemBackground="@drawable/menu_item_drawable"/>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
