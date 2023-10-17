@@ -10,6 +10,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.achivify.R
 import com.example.achivify.databinding.ActivityMainBinding
@@ -17,6 +18,8 @@ import com.example.achivify.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private var authenticated: Boolean = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -44,11 +47,15 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_todo -> fragment = TodoListFragment()
                 R.id.nav_achievement -> fragment = AchievementsFragment()
                 R.id.nav_explore -> fragment = ExploreFragment()
-                else -> fragment = TodoListFragment()
+                else -> {
+                    authenticated = false
+                    checkAuthentication()
+                }
             }
             if(fragment != null){
                 val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
                 ft.replace(R.id.fragment_container, fragment)
+                ft.addToBackStack(null)
                 ft.commit()
                 binding.drawerLayout.closeDrawers()
                 true
@@ -56,10 +63,35 @@ class MainActivity : AppCompatActivity() {
             else{
                 false
             }
+        }
+        checkAuthentication()
+    }
+
+    fun checkAuthentication(){
+        // check if user authenticate
+        if(authenticated){
+            // enable action bar and start home fragment
+            binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+            supportActionBar?.show()
+            binding.navigationView.setCheckedItem(R.id.nav_todo)
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragment_container, TodoListFragment())
+                addToBackStack(null)
+                commit()
+            }
+        }
+        else{
+            binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+            supportActionBar?.hide()
+            supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragment_container, AuthenticationFragment())
+                commit()
+            }
+
 
         }
     }
-
     override fun onBackPressed() {
         if(binding.drawerLayout.isDrawerOpen(GravityCompat.START)){
             binding.drawerLayout.closeDrawer(GravityCompat.START)

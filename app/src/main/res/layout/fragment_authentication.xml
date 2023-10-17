@@ -50,9 +50,9 @@
         <Button
             android:id="@+id/login_nav"
             android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:text="Log in"
-            android:background="@drawable/button_outline"
+            android:backgroundTint="#FA6464"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_end_todoview4"
             app:layout_constraintHorizontal_bias="0.493"
@@ -63,7 +63,8 @@
         <Button
             android:id="@+id/signup_nav"
             android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
+            android:backgroundTint="#FA6464"
             android:text="Sign Up"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_end_todoview4"

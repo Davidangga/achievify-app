@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1022914511386",
+    "project_id": "achivify",
+    "storage_bucket": "achivify.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022914511386:android:2df00a23eea5d81ceac7a3",
+        "android_client_info": {
+          "package_name": "com.example.achivify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvOqldDJL1fVDoflyOsrKDQJ2GV3dAhW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
